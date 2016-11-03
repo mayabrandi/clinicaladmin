@@ -51,7 +51,7 @@ class ApplicationDetails(db.Model):
     accredited = db.Column(db.String(500), unique=False)
     description = db.Column(db.String(500), unique=False)
     comment = db.Column(db.String(500), unique=False)
-
+    percent_charged_to_kth = db.Column(db.String(500), unique=False)
 
     def __repr__(self):
         return '{} v{}'.format(self.application_tag, self.version)
@@ -88,6 +88,14 @@ class MethodDescription(db.Model):
     limitations = db.Column(db.String(500), unique=False)
     version = db.Column(db.String(500), unique=False)
 
+
+
+class Invoice(db.Model):
+    __tablename__ = 'invoice'
+    id = db.Column(db.Integer, primary_key=True)
+    invoice_id = db.Column(db.String(500), unique=False)
+    customer = db.Column(db.String(500), unique=False)
+    invoice_date = db.Column(db.String(500), unique=False)
 
 
 
