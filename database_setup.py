@@ -21,6 +21,8 @@ def set_simple_table(csv_file, model_class ):
         db.session.add(model)
         db.session.commit()
 
+
+
 def set_price_table(csv_file): #Depends on Prices
     f=open(csv_file, 'rU')
     rdr = csv.reader(f, lineterminator = '\r')
