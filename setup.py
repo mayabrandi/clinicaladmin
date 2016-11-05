@@ -10,5 +10,4 @@ setup(name='invoice_db',
       author='Maya Brandi',
       author_email='maya.brandi@scilifelab.se',
       packages=['clinicaladmin'],
-#      scripts=glob.glob("database.py")
      )

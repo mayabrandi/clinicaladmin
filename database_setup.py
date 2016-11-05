@@ -1,7 +1,7 @@
 import csv
 import json
 import ast
-from clinicaladmin.database import db, ApplicationDetails, ApplicationTagData, MethodDescription, Customers
+from clinicaladmin.database import db, ApplicationDetails, ApplicationTagData, MethodDescription, Customers, Invoice
 
 db.drop_all()
 db.create_all()
@@ -52,7 +52,7 @@ csv_file = '/tmp/custs.csv'
 set_simple_table(csv_file, Customers)
 
 csv_file = '/tmp/Invoice.csv'
-set_simple_table(csv_file, Customers)
+set_simple_table(csv_file, Invoice)
 
 csv_file = '/tmp/prices.csv'
 set_price_table(csv_file)
